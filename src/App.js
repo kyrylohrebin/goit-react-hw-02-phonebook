@@ -3,6 +3,7 @@ import { Component } from 'react';
 import ContactForm from './ContactForm/ContactForm';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
+import styles from './App.module.css';
 
 class App extends Component {
   state = {
@@ -49,7 +50,7 @@ class App extends Component {
     const { filter } = this.state;
     const filteredContacts = this.getFilteredContacts();
     return (
-      <div>
+      <div className={styles.container}>
         <h1>Phonebook</h1>
         <ContactForm
           contactAdd={this.handleAddContact}
